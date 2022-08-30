@@ -1,0 +1,11 @@
+.movie-details-container{
+    padding: 15px;
+}
+
+.movie-details-title {
+    margin-top: 17px;
+    color: #fff;
+    font-size: 24px;
+    letter-spacing: -0.015em;
+    font-weight: 700;
+}

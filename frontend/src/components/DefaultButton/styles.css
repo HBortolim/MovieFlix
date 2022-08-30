@@ -1,0 +1,17 @@
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-container button {
+    border-radius: 4px;
+    min-height: 50px;
+    min-width: 265px;
+}
+
+.btn-container button p {
+    margin: 0;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+}

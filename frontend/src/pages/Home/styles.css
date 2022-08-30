@@ -1,0 +1,59 @@
+.home-container {
+    text-align: center;
+    padding: 10px;
+    height: calc(100vh - 78px);
+}
+
+.hero-container {
+    display: none;
+}
+
+.login-card-container {
+    padding: 0 27px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card-container h2 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 36px;
+    margin: 60px 0 20px 0;
+}
+
+.home-container .base-input:last-of-type {
+    margin-bottom: 50px;
+}
+
+@media(min-width: 1200px) {
+    .home-container {
+        text-align: initial;
+        margin-top: 38px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: auto;
+    }
+
+    .hero-container {
+        display: block;
+    }
+
+    .hero-container h1 {
+        font-weight: 700;
+        font-size: 48px;
+        letter-spacing: -0.015em;
+        color: #FFFFFF;
+        margin-left: 30px;
+    }
+
+    .hero-container p {
+        max-width: 320px;
+        font-size: 22px;
+        letter-spacing: -0.015em;
+        color: #F2F2F2;
+        margin: 0 0 50px 30px;
+    }
+}

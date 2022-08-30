@@ -1,0 +1,35 @@
+.review-list-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.review-box {
+    padding: 15px;
+}
+
+.review-box-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 9px;
+}
+
+.review-box-header h3 {
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: -0.015em;
+    margin: 0 0 0 15px;
+}
+
+.review-box-description {
+    border: 1px solid #E1E1E1;
+    border-radius: 4px;
+    padding: 12px;
+}
+
+.review-box-description p {
+    font-size: 16px;
+    text-align: justify;
+    letter-spacing: -0.015em;
+    color: #9E9E9E;
+}
