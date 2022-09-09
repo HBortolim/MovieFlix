@@ -16,8 +16,13 @@ h6 {
     font-weight: 700;
 }
 
-a,
-a:hover {
+
+ul {
+    list-style-type: none;
+}
+
+.base-link,
+.base-link:hover {
     text-decoration: none;
     color: unset;
 }

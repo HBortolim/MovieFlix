@@ -23,11 +23,11 @@ const Home = () => {
 
   const { from } = location.state || { from: { pathname: "/movies" } };
 
+  const history = useHistory();
+
   const [hasError, setHasError] = useState(false);
 
   const { setAuthContextData } = useContext(AuthContext);
-
-  const history = useHistory();
 
   const {
     register,
@@ -56,9 +56,7 @@ const Home = () => {
       <div className="hero-container">
         <h1>Avalie Filmes</h1>
         <p>Diga o que você achou do seu filme favorito</p>
-        
-          <HomeImage />
-        
+        <HomeImage />
       </div>
       <div className="base-card login-card-container">
         <h2>Login</h2>

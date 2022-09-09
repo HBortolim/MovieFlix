@@ -39,9 +39,13 @@ const MovieDetails = () => {
 
   return (
     <div className="movie-details-container">
-      <h1 className="movie-details-title">
-        Telha Detalhes do Filme id: {movieId}
-      </h1>
+      <div className="movie-card-full-container">
+        <div className="movie-card-full-img-container">
+          
+        </div>
+        <div className="movie-card-full-text-container"></div>
+        <div className="moive-card-full-description-container"></div>
+      </div>
       {hasAnyRoles(["ROLE_MEMBER"]) && (
         <ReviewForm movieId={movieId} onInsertReview={handleInsertReview} />
       )}

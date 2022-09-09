@@ -1,6 +1,7 @@
 import { AxiosRequestConfig } from "axios";
 import DefaultButton from "components/DefaultButton";
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 import { Review } from "types/review";
 import { requestBackend } from "util/requests";
 
@@ -36,10 +37,14 @@ const ReviewForm = ({ movieId, onInsertReview }: Props) => {
       .then((response) => {
         console.log(response.data);
         onInsertReview(response.data);
+        toast.success("Avaliação inserida com sucesso!", {
+          autoClose: 2000,
+          pauseOnHover: false,
+        });
         setValue("text", "");
       })
-      .catch((e) => {
-        console.log("Deu ruim: ", e);
+      .catch(() => {
+        toast.error("Não é possível inserir uma avaliação vazia!");
       });
   };
 
@@ -47,9 +52,7 @@ const ReviewForm = ({ movieId, onInsertReview }: Props) => {
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="form-container base-card">
         <input
-          {...register("text", {
-            required: "Avaliação não pode ser vazia!",
-          })}
+          {...register("text")}
           type="text"
           name="text"
           id="text"
@@ -57,7 +60,9 @@ const ReviewForm = ({ movieId, onInsertReview }: Props) => {
           className="base-input form-control"
           autoComplete="off"
         />
-        {errors.text && <span className="alert alert-danger">{errors.text?.message}</span>}        
+        {errors.text && (
+          <span className="alert alert-danger">{errors.text?.message}</span>
+        )}
         <DefaultButton text="Salvar Avaliação" />
       </div>
     </form>
