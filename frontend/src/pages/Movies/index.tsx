@@ -63,9 +63,7 @@ const Movies = () => {
   return (
     <div className="container">
       <div className="movie-list-container">
-        
-          <MovieFilter onSubmitFilter={handleSubmitFilter} />
-        
+        <MovieFilter onSubmitFilter={handleSubmitFilter} />
         <div className="row">
           {page?.content.map((movie) => (
             <div

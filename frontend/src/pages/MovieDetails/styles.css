@@ -1,11 +1,10 @@
-.movie-details-container{
+.movie-details-container {
     padding: 15px;
 }
 
-.movie-details-title {
-    margin-top: 17px;
-    color: #fff;
-    font-size: 24px;
-    letter-spacing: -0.015em;
-    font-weight: 700;
+.movie-card-description-container {
+    border: 1px solid #E1E1E1;
+    border-radius: 10px;
+    color: #9E9E9E;
+    padding: 10px;
 }

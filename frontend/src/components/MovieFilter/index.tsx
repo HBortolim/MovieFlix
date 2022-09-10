@@ -42,27 +42,26 @@ const MovieFilter = ({ onSubmitFilter }: Props) => {
   }, []);
 
   return (
-      <div className="genre-filter-container">
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <Controller
-            name="genre"
-            control={control}
-            render={({ field }) => (
-              <Select
-                {...field}
-                options={selectGenre}
-                getOptionLabel={(genre: Genre) => genre.name}
-                getOptionValue={(genre: Genre) => String(genre.id)}
-                isClearable
-                classNamePrefix="genre-filter-select"
-                placeholder="Gênero"
-                onChange={(value) => handleChangeGenre(value as Genre)}
-              />
-            )}
-          />
-        </form>
-      </div>
-    
+    <div className="genre-filter-container">
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <Controller
+          name="genre"
+          control={control}
+          render={({ field }) => (
+            <Select
+              {...field}
+              options={selectGenre}
+              getOptionLabel={(genre: Genre) => genre.name}
+              getOptionValue={(genre: Genre) => String(genre.id)}
+              isClearable
+              classNamePrefix="genre-filter-select"
+              placeholder="Gênero"
+              onChange={(value) => handleChangeGenre(value as Genre)}
+            />
+          )}
+        />
+      </form>
+    </div>
   );
 };
 
