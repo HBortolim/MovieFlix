@@ -56,15 +56,15 @@ const MovieDetails = () => {
 
   return (
     <div className="movie-details-container">
-      <div className="movie-card-container base-card">
-        <div className="movie-card-img-container">
+      <div className="movie-card-full-container base-card">
+        <div className="movie-card-full-img-container">
           <img src={movie?.imgUrl} alt="Movie Cover" />
         </div>
-        <div className="movie-card-text-container">
+        <div className="movie-card-full-text-container">
           <h3>{movie?.title}</h3>
-          <p className="movie-card-text-year text-primary">{movie?.year}</p>
-          <p className="movie-card-text-subtitle">{movie?.subTitle}</p>
-          <div className="movie-card-description-container">
+          <p className="movie-card-full-text-year text-primary">{movie?.year}</p>
+          <p className="movie-card-full-text-subtitle">{movie?.subTitle}</p>
+          <div className="movie-card-full-description-container">
             {movie?.synopsis}
           </div>
         </div>
