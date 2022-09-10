@@ -1,6 +1,6 @@
 import { AxiosRequestConfig } from "axios";
 import MovieCard from "components/MovieCard";
-import MovieFilter, { ProductFilterData } from "components/MovieFilter";
+import MovieFilter, { MovieFilterData } from "components/MovieFilter";
 import Pagination from "components/Pagination";
 import { useEffect, useState, useCallback } from "react";
 import { Link } from "react-router-dom";
@@ -11,7 +11,7 @@ import "./styles.css";
 
 type ControlComponentsData = {
   activePage: number;
-  filterData: ProductFilterData;
+  filterData: MovieFilterData;
 };
 
 const Movies = () => {
@@ -32,7 +32,7 @@ const Movies = () => {
     });
   };
 
-  const handleSubmitFilter = (data: ProductFilterData) => {
+  const handleSubmitFilter = (data: MovieFilterData) => {
     setControlComponentsData({ activePage: 0, filterData: data });
   };
 
@@ -44,7 +44,7 @@ const Movies = () => {
       params: {
         page: controlComponentsData.activePage,
         size: 3,
-        genre: controlComponentsData.filterData.genre?.id,
+        genreId: controlComponentsData.filterData.genre?.id,
       },
     };
     requestBackend(params)
@@ -63,9 +63,9 @@ const Movies = () => {
   return (
     <div className="container">
       <div className="movie-list-container">
-        <div className="row">
+        
           <MovieFilter onSubmitFilter={handleSubmitFilter} />
-        </div>
+        
         <div className="row">
           {page?.content.map((movie) => (
             <div
